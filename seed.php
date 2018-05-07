@@ -4,7 +4,7 @@ require_once ('ConnectionDB.php');
 
 $db = ConnectionDB::get();
 
-for($i = 1; $i < 100; $i++ ){
+for($i = 1; $i < 10000; $i++ ){
     $username = get_name();
     $gender = get_gender();
     $format = 'Y-m-d';

@@ -4,13 +4,23 @@ require_once ('ConnectionDB.php');
 
 $db = ConnectionDB::get();
 
+//$db->query("CREATE TABLE `users` (
+//                  `id` INT(11) NOT NULL AUTO_INCREMENT,
+//                  `name` VARCHAR(255) DEFAULT NULL,
+//                  `gender` INT(11) NOT NULL,
+//                  `birth_date` DATE NOT NULL,
+//                  PRIMARY KEY (`id`),
+//                  INDEX idx_birth_date (birth_date)
+//                  )
+//          ");
+
 $db->query("CREATE TABLE `users` (
                   `id` INT(11) NOT NULL AUTO_INCREMENT,
                   `name` VARCHAR(255) DEFAULT NULL,
                   `gender` INT(11) NOT NULL,
                   `birth_date` DATE NOT NULL,
                   PRIMARY KEY (`id`),
-                  INDEX idx_birth_date (birth_date)
+                  INDEX idx_gender_birth_date (gender, birth_date)
                   )
           ");
 
